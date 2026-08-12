@@ -7,7 +7,7 @@ public class Petvirtual {
     private String humor;
 
     //metodo construtor
-    public Petvirtual(String nome, Integer fome, Integer energia) {
+    private Petvirtual(String nome, Integer fome, Integer energia) {
         setNome(nome);
         setEnergia(energia);
         setFome(fome);
@@ -16,19 +16,19 @@ public class Petvirtual {
 //getter
 
 
-    public String getNome() {
+     private String getNome() {
         return nome;
     }
 
-    public Integer getfome() {
+    private Integer getfome() {
         return fome;
     }
 
-    public Integer getEnergia() {
+    private Integer getEnergia() {
         return energia;
     }
 
-    public String getHumor() {
+     private String getHumor() {
         if (energia >= 0 && fome >= 0) {
             int feliz = (this.energia +this.fome)/2;
 
@@ -44,7 +44,7 @@ public class Petvirtual {
     }
 
         //setter
-        public void setFome ( int fome){
+        private void setFome ( int fome){
             if (this.fome >= 30) {
                 IO.println("saciado");
             } else if (this.fome >= 70) {
@@ -54,7 +54,7 @@ public class Petvirtual {
             }
         }
 
-        public void setEnergia ( int energia){
+        private void setEnergia ( int energia){
             if (energia >= 0 && energia <= 30) {
                 this.energia += energia;
                 IO.println("esgotado");
@@ -66,7 +66,7 @@ public class Petvirtual {
             }
         }
 
-        public void setNome (String nome){
+        private void setNome (String nome){
             this.nome = nome;
 
 
